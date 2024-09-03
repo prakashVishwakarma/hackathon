@@ -3,11 +3,19 @@ import App from "../App";
 
 export const router = createBrowserRouter([
     {
-        path: "/",
-        element: <div>Hello world!</div>,
+        path: "/admin-create-challenge",
+        element: <App />,
     },
     {
-        path: "/App",
+        path: "/home",
+        element: <App />,
+    },
+    {
+        path: "/details",
+        element: <App />,
+    },
+    {
+        path: "/admin-edit-challenge",
         element: <App />,
     },
 ]);
