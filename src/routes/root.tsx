@@ -3,6 +3,9 @@ import App from "../App";
 
 export const router = createBrowserRouter([
     {
+        path: "/",
+        element: <App />,
+    },{
         path: "/admin-create-challenge",
         element: <App />,
     },
