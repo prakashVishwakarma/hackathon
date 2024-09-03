@@ -1,0 +1,21 @@
+.ParticipateAIChallengesContainer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.ParticipateAIChallengesContainerFluid>h1 {
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.ParticipateAIChallengesContainerFluid {
+    width: 90%;
+}
+.ParticipateAIChallengesContainerFluid>div{
+    
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: space-evenly;
+}

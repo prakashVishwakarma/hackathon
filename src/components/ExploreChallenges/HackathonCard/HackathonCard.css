@@ -1,0 +1,38 @@
+.HackathonCard {
+    width: 23%;
+    border-radius: 15px;
+    text-align: center;
+
+}
+
+.HackathonCard>.img>img {
+    width: 100%;
+}
+
+.HackathonCardTextContainer {
+    width: 90%;
+}
+
+.HackathonCardTextContainer>span {
+    padding: 5px 15px 5px;
+    border-radius: 5px;
+}
+
+.HackathonCardTextContainer>h1 {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.HackathonCardTextContainer>h2 {
+
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.HackathonCardTextContainer>.button {
+
+    margin-top: 10px;
+    margin-bottom: 20px;
+}

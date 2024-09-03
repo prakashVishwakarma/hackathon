@@ -1,0 +1,8 @@
+.GreenButton{
+    color: rgb(226, 226, 226);
+    background-color: #44924C;
+    font-weight: bold;
+    padding: 3% 5% 3%;
+    border-radius: 10px;
+    border: none;
+}

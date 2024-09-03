@@ -1,13 +1,26 @@
 import { createBrowserRouter, } from "react-router-dom";
 import App from "../App";
+import AdminCreateChallenge from "../pages/admin-create-challenge";
+import SignupPage from "../pages/signup";
+import Login from "../components/Login/Login";
+import Home from "../pages/home";
 
 export const router = createBrowserRouter([
     {
+        path: "/login",
+        element: <Login />,
+    },
+    {
+        path: "/signup",
+        element: <SignupPage />,
+    },
+    {
         path: "/",
-        element: <App />,
-    },{
+        element: <Home />,
+    },
+    {
         path: "/admin-create-challenge",
-        element: <App />,
+        element: <AdminCreateChallenge />,
     },
     {
         path: "/home",

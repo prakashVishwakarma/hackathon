@@ -1,9 +1,14 @@
+import ExploreChallenges from "../components/ExploreChallenges/ExploreChallenges"
+import Hero from "../components/HomeHero/Hero"
+import ParticipateAIChallenges from "../components/ParticipateAIChallenges/ParticipateAIChallenges"
 
 const Home: React.FC = () => {
   return (
-    <div>
-      d
-    </div>
+    <>
+      <Hero/>
+      <ParticipateAIChallenges />
+      <ExploreChallenges />
+    </>
   )
 }
 

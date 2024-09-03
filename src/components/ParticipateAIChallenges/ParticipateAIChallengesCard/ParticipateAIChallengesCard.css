@@ -1,0 +1,13 @@
+.ParticipateAIChallengesCardContainer {
+    width: 40%;
+    border-radius: 10px;
+    background-color: #F8F9FD;
+    margin-bottom: 100px;
+
+}
+
+.ParticipateAIChallengesCardContainer>h1,
+.ParticipateAIChallengesCardContainer>img,
+.ParticipateAIChallengesCardContainer>p {
+    margin: 20px;
+}

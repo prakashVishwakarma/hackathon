@@ -1,0 +1,8 @@
+.whitebutton{
+    color: rgb(43, 43, 43);
+    background-color: rgb(237, 242, 255);
+    font-weight: bold;
+    padding: 2% 5% 2%;
+    border-radius: 10px;
+    border: none;
+}

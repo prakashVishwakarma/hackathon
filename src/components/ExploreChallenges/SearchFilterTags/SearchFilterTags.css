@@ -1,0 +1,79 @@
+/* Dropdown container */
+.dropdownContainer {
+    width: 200px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
+}
+
+/* Dropdown header */
+.dropdownHeader {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    cursor: pointer;
+    border-bottom: 1px solid #eee;
+}
+
+/* Arrow icon */
+.arrow {
+    transition: transform 0.3s;
+}
+
+.arrow.open {
+    transform: rotate(180deg);
+}
+
+/* Dropdown content */
+.dropdownContent {
+    padding: 10px;
+}
+
+/* Section titles */
+.section h4 {
+    margin: 10px 0;
+    font-size: 14px;
+    color: #333;
+}
+
+/* Checkbox group styling */
+.checkboxGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.checkboxGroup label {
+    font-size: 14px;
+    color: #666;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+
+
+.SearchFilterTagsContainer {
+    background-color: #002A3B;
+    margin-top: 30px;
+}
+
+.SearchFilterTagsContainer>h1 {
+    color: #FFFFFF;
+    text-align: center;
+    padding: 30px;
+}
+
+.SearchFilterTagsContainer>div {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.SearchFilterTagsContainer>div>input {
+    width: 50%;
+    height: 40px;
+    border-radius: 10px;
+}
