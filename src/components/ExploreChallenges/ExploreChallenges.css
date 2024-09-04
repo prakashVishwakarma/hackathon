@@ -1,0 +1,14 @@
+.ExploreChallengesLayout{
+    background-color: rgba(0, 49, 69, 1);
+    width: 100%;
+    display: flex;
+    justify-content: center ;
+}
+.ExploreChallengesLayoutfluid{
+    width: 90%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 5em;
+
+}

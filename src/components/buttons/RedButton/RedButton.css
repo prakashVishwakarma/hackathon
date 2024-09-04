@@ -1,0 +1,9 @@
+.RedButton{
+    background-color: rgba(255, 0, 0, 0);
+    border: 2px solid red;
+    color: red;
+    padding: 11px;
+    border-radius: 10px;
+    
+    height: fit-content;
+}

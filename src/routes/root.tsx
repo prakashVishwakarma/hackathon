@@ -4,6 +4,7 @@ import AdminCreateChallenge from "../pages/admin-create-challenge";
 import SignupPage from "../pages/signup";
 import Login from "../components/Login/Login";
 import Home from "../pages/home";
+import Details from "../pages/details";
 
 export const router = createBrowserRouter([
     {
@@ -28,7 +29,7 @@ export const router = createBrowserRouter([
     },
     {
         path: "/details",
-        element: <App />,
+        element: <Details />,
     },
     {
         path: "/admin-edit-challenge",

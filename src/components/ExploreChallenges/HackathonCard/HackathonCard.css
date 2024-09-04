@@ -2,6 +2,8 @@
     width: 23%;
     border-radius: 15px;
     text-align: center;
+    background-color: rgb(255, 255, 255);
+    margin-bottom: 35px;
 
 }
 
@@ -16,6 +18,8 @@
 .HackathonCardTextContainer>span {
     padding: 5px 15px 5px;
     border-radius: 5px;
+    background-color: rgba(242, 201, 76, 0.25);
+    ;
 }
 
 .HackathonCardTextContainer>h1 {

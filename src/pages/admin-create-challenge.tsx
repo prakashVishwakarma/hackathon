@@ -41,7 +41,7 @@ const AdminCreateChallenge: React.FC = () => {
             <option value="Hard">Hard</option>
           </select>
         </div>
-        <GreenButton name={'Create Challenge'} />
+        <GreenButton text={'Create Challenge'} />
       </div>
     </div>
   )

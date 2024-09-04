@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import './SearchFilterTags.css'
 import WhiteButton from '../../buttons/WhiteButton/WhiteButton';
+import Tag from '../../Tag/Tag';
 
 const SearchFilterTags = () => {
 
@@ -63,7 +64,16 @@ const SearchFilterTags = () => {
                         </div>
                     )}
                 </div>
+                
             </div>
+            <div className="TagsContainer">
+                    <Tag text={'texts'} />
+                    <Tag text={'texts'} />
+                    <Tag text={'texts'} />
+                    <Tag text={'texts'} />
+                    <Tag text={'texts'} />
+                    <Tag text={'texts'} />
+                </div>
         </div>
     )
 }

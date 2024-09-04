@@ -1,0 +1,38 @@
+.detailsContainer {
+    width: 100%;
+    background-color: rgba(0, 49, 69, 1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
+
+}
+
+.detailsContainerfluid {
+    width: 90%;
+}
+
+.detailsContainerStripe {
+    background: rgba(255, 206, 92, 1);
+    width: fit-content;
+    padding: 10px 30px 10px 30px;
+    display: flex;
+    border-radius: 10px;
+    margin-bottom: 40px;
+}
+
+.detailsContainerfluid>h1 {
+    color: white;
+    margin-bottom: 40px;
+    font-size: 2.5em;
+}
+
+.detailsContainerfluid>p {
+    margin-bottom: 40px;
+    color: white;
+}
+
+.detailsContainerLavelType {
+    padding: 1em;
+    border-radius: 10px;
+}
