@@ -5,6 +5,7 @@ import SignupPage from "../pages/signup";
 import Login from "../components/Login/Login";
 import Home from "../pages/home";
 import Details from "../pages/details";
+import AdminEditChallenge from "../pages/admin-edit-challenge";
 
 export const router = createBrowserRouter([
     {
@@ -33,6 +34,6 @@ export const router = createBrowserRouter([
     },
     {
         path: "/admin-edit-challenge",
-        element: <App />,
+        element: <AdminEditChallenge />,
     },
 ]);

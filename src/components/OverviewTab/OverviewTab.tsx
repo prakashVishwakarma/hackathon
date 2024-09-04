@@ -1,7 +1,22 @@
+import { useNavigate } from 'react-router-dom'
 import GreenButton from '../buttons/GreenButton/GreenButton'
 import RedButton from '../buttons/RedButton/RedButton'
 import './OverviewTab.css'
+
 const OverviewTab = () => {
+
+    const navigate = useNavigate()
+
+    const handleClickEdit = ()=>{
+        navigate('/admin-edit-challenge')
+    }
+    
+    const handleClickDelete = ()=>{
+        if(confirm()){
+            navigate('/admin-edit-challenge')
+        }
+    }
+
     return (
         <>
             <div className='OverviewTabStripe'>
@@ -9,8 +24,8 @@ const OverviewTab = () => {
                     <p>Overview</p>
                 </div>
                 <div className="OverviewTabRight">
-                    <GreenButton text={'Edit'} />
-                    <RedButton text={'Delete'} />
+                    <GreenButton onClick={()=>handleClickEdit()} text={'Edit'} />
+                    <RedButton onClick={()=>handleClickDelete()} text={'Delete'} />
                 </div>
             </div>
             <div className='OverviewTabTexts'>

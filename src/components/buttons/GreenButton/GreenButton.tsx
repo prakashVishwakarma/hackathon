@@ -1,10 +1,10 @@
 import './GreenButton.css'
 
-const GreenButton = ({ text }: any) => {
+const GreenButton = ({ text,onClick }: any) => {
 
     return (
         <>
-            <button className="GreenButton" type="button">{text}</button>
+            <button onClick={onClick} className="GreenButton" type="button">{text}</button>
         </>
     )
 }

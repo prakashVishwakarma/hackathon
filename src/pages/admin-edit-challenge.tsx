@@ -1,9 +1,10 @@
+import Form from "../components/Form/Form"
 
 const AdminEditChallenge: React.FC = () => {
   return (
-    <div>
-      
-    </div>
+    <>
+      <Form />
+    </>
   )
 }
 

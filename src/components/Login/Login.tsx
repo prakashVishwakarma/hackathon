@@ -7,12 +7,12 @@ const Login = () => {
 
             <div>
                 <label>User Name</label>
-                <input type="text" name="username" id="" />
+                <input type="text" name="username" />
             </div>
 
             <div>
                 <label>Password</label>
-                <input type="password" name="password" id="" />
+                <input type="password" name="password" />
             </div>
 
             <button type="button">Login</button>

@@ -1,8 +1,8 @@
 import './RedButton.css'
 
-const RedButton = ({text}:any) => {
+const RedButton = ({text,onClick}:any) => {
   return (
-    <button className='RedButton'>{text}</button>
+    <button onClick={onClick} className='RedButton'>{text}</button>
   )
 }
 

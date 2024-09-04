@@ -1,9 +1,9 @@
 import './WhiteButton.css'
 
-const WhiteButton = ({text}:any) => {
+const WhiteButton = ({text,onClick}:any) => {
   return (
     <>
-      <button className="whitebutton" type="button">{text}</button>
+      <button onClick={onClick} className="whitebutton" type="button">{text}</button>
     </>
   )
 }
