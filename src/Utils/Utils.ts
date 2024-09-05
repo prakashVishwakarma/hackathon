@@ -1,5 +1,5 @@
 import { constant } from "../constants/constant";
-import { Card } from "../typescript/typescript";
+import { Card, Challenge } from "../typescript/typescript";
 
 export function setLocalStorage<T>(key: string, value: T): boolean {
   try {
@@ -62,3 +62,27 @@ export function generateRandomMongoDBId(): { id: string; success: boolean } {
 export const findCardById = (cards: Card[], id: any): Card | undefined => {
   return cards.find(card => card.id === id);
 };
+
+export function removeObjecteById(challenges: Challenge[], id: string): Challenge[] {
+  return challenges.filter(challenge => challenge.id !== id);
+}
+
+export function determineDateStatus(startDate: Date, endDate: Date): string {
+  const currentDate = new Date();
+
+  // Clear time components for accurate comparison
+  // currentDate.setHours(0, 0, 0, 0);
+  // startDate.setHours(0, 0, 0, 0);
+  // endDate.setHours(0, 0, 0, 0);
+
+  if (endDate < currentDate) {
+    return 'Past';
+  } else if (startDate <= currentDate && endDate >= currentDate) {
+    return 'Active';
+  } else if (startDate > currentDate) {
+    return 'Upcoming';
+  } else {
+    return 'Unknown'; // In case none of the conditions match
+  }
+}
+

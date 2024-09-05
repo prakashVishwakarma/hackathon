@@ -7,18 +7,25 @@ import { myLocalData } from "../../constants/constant";
 import StatisticIcon1 from "./../../assets/icons/Group 1000002515.svg";
 import StatisticIcon2 from "./../../assets/icons/Group 1000002516.svg";
 import StatisticIcon3 from "./../../assets/icons/Group 1000002518.svg";
+import { useEffect, useState } from "react";
+
 const Hero = () => {
 
     const navigate = useNavigate();
 
     const handleCreateChallenge = () => {
         const { data } = getDataFromLocalStorage<any>(myLocalData);
-        if(data.credentials.role === 'Organizers'){
+        if(data?.credentials?.role === 'Organizers'){
             navigate("/admin-create-challenge");
         }else{
             alert('Signup as a Organizers to create challenge')
         }
     }
+
+    useEffect(()=>{
+        const { data } = getDataFromLocalStorage<any>(myLocalData);
+        data ? navigate("/"): navigate("/signup");
+    },[])
 
     return (
         <>

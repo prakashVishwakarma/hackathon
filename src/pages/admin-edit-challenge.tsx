@@ -5,7 +5,6 @@ import { getDataFromLocalStorage, findCardById } from "../Utils/Utils";
 
 const AdminEditChallenge: React.FC = () => {
 
-  
   const [searchParams] = useSearchParams();
   const id = searchParams.get('id');
   const { data } = getDataFromLocalStorage<any>(myLocalData);

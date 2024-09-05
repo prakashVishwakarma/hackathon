@@ -2,18 +2,32 @@ import { useNavigate } from 'react-router-dom'
 import GreenButton from '../buttons/GreenButton/GreenButton'
 import RedButton from '../buttons/RedButton/RedButton'
 import './OverviewTab.css'
+import { getDataFromLocalStorage, removeObjecteById, setLocalStorage } from '../../Utils/Utils'
+import { myLocalData } from '../../constants/constant'
 
-const OverviewTab = ({id}:any) => {
+const OverviewTab = ({ id }: any) => {
 
     const navigate = useNavigate()
+    const { data } = getDataFromLocalStorage<any>(myLocalData);
 
-    const handleClickEdit = ()=>{
-        navigate(`/admin-edit-challenge?id=${id}`)
+    const handleClickEdit = () => {
+        if (data?.credentials?.role === 'Organizers') {
+            navigate(`/admin-edit-challenge?id=${id}`)
+        } else {
+            alert('Signup as a Organizers to Edit challenge')
+        }
     }
-    
-    const handleClickDelete = ()=>{
-        if(confirm()){
-            navigate('/admin-edit-challenge')
+
+    const handleClickDelete = () => {
+        if (confirm()) {
+            if (data?.credentials?.role === 'Organizers') {
+                const filterdCard = removeObjecteById(data?.card, id)
+                data.card = [...filterdCard]
+                setLocalStorage(myLocalData, data)
+                navigate('/')
+            } else {
+                alert('Signup as a Organizers to Edit challenge')
+            }
         }
     }
 
@@ -24,8 +38,8 @@ const OverviewTab = ({id}:any) => {
                     <p>Overview</p>
                 </div>
                 <div className="OverviewTabRight">
-                    <GreenButton onClick={()=>handleClickEdit()} text={'Edit'} />
-                    <RedButton onClick={()=>handleClickDelete()} text={'Delete'} />
+                    <GreenButton onClick={() => handleClickEdit()} text={'Edit'} />
+                    <RedButton onClick={() => handleClickDelete()} text={'Delete'} />
                 </div>
             </div>
             <div className='OverviewTabTexts'>

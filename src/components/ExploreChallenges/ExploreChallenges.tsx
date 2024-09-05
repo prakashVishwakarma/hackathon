@@ -31,7 +31,9 @@ const ExploreChallenges = () => {
             card?.map((value: any, index: any) => {
               return (
                 <Fragment key={index}>
-                  <HackathonCard value={{value, index}} />
+                  {
+                    value?.challengeName && <HackathonCard value={{value, index}} />
+                  }
                 </Fragment>
               )
             })

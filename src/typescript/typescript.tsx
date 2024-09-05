@@ -7,3 +7,11 @@ export interface Card {
     lavelType: string; // Easy | Medium | Hard
     description: string;
 }
+
+export type Challenge = {
+    id: string;
+    challengeName: string;
+    startDate: string;
+    endDate: string;
+    description: string;
+  };

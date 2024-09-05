@@ -4,8 +4,9 @@ import './Form.css'
 
 import { useFormik } from "formik";
 import * as Yup from "yup";
-import { generateRandomMongoDBId, getDataFromLocalStorage, setLocalStorage, } from '../../Utils/Utils';
+import { generateRandomMongoDBId, getDataFromLocalStorage, removeObjecteById, setLocalStorage, } from '../../Utils/Utils';
 import { myLocalData } from '../../constants/constant';
+
 const Form = ({ card }: any) => {
   console.log('challengeName', card)
   const navigate = useNavigate();
@@ -15,12 +16,12 @@ const Form = ({ card }: any) => {
   const validationSchema = Yup.object({
     challengeName: Yup.string().required("Challenge Name is required"),
     startDate: Yup.date()
-      .min(new Date("2024-09-01"), "Start Date cannot be before 2024-09-01")
-      .max(new Date("2024-12-31"), "Start Date cannot be after 2024-12-31")
+      // .min(new Date("2024-09-01"), "Start Date cannot be before 2024-09-01")
+      // .max(new Date("2024-12-31"), "Start Date cannot be after 2024-12-31")
       .required("Start Date is required"),
     endDate: Yup.date()
-      .min(Yup.ref("startDate"), "End Date cannot be before Start Date")
-      .max(new Date("2024-12-31"), "End Date cannot be after 2024-12-31")
+      // .min(Yup.ref("startDate"), "End Date cannot be before Start Date")
+      // .max(new Date("2024-12-31"), "End Date cannot be after 2024-12-31")
       .required("End Date is required"),
     description: Yup.string().required("Description is required"),
     // imageUpload: Yup.mixed().required("Image is required"),
@@ -39,17 +40,25 @@ const Form = ({ card }: any) => {
     },
     validationSchema,
     onSubmit: (values) => {
-      console.log("Form Data:", values);
-      console.log("Challenge created successfully!");
 
-      const { id, success } = generateRandomMongoDBId();
+      let cardId: string = card?.id
       const { data } = getDataFromLocalStorage<any>(myLocalData);
-      if (success) {
-        data.card.push({ ...values, id });
-        setLocalStorage(myLocalData, data)
+      const { id } = generateRandomMongoDBId();
+      // console.log('filterdCard', removeObjecteById(data?.card, cardId))
+      // console.log('filterdCard', data?.card,cardId)
+
+      if (card?.id) {
+        const filterdCard = removeObjecteById(data?.card, cardId)
+        // let s = [...filterdCard, { ...values, id: cardId }]
+        // data.card.push({ ...values, id: cardId });
+        data.card = [...filterdCard, { ...values, id: cardId }]
+        // console.log('xxxxxxxxxxxxx',data)
       } else {
-        console.log("Failed to generate ID.");
+
+        data.card.push({ ...values, id });
       }
+
+      setLocalStorage(myLocalData, data)
       navigate("/");
     },
   });
@@ -79,8 +88,8 @@ const Form = ({ card }: any) => {
             type="date"
             id="startDate"
             name="startDate"
-            min="2024-09-01"
-            max="2024-12-31"
+            // min="2024-09-01"
+            // max="2024-12-31"
             onChange={formik.handleChange}
             onBlur={formik.handleBlur}
             value={formik.values.startDate}
@@ -96,8 +105,8 @@ const Form = ({ card }: any) => {
             type="date"
             id="endDate"
             name="endDate"
-            min="2024-09-01"
-            max="2024-12-31"
+            // min="2024-09-01"
+            // max="2024-12-31"
             onChange={formik.handleChange}
             onBlur={formik.handleBlur}
             value={formik.values.endDate}
