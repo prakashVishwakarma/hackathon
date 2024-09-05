@@ -1,11 +1,12 @@
 import { useNavigate } from "react-router-dom";
 import WhiteButton from "../buttons/WhiteButton/WhiteButton"
-import Statistic from "../Statistic/Statistic";
 import MyIcon from "./../../assets/icons/PicsArt_04-14-04.42 1.svg";
 import './hero.css'
 import { getDataFromLocalStorage } from "../../Utils/Utils";
 import { myLocalData } from "../../constants/constant";
-
+import StatisticIcon1 from "./../../assets/icons/Group 1000002515.svg";
+import StatisticIcon2 from "./../../assets/icons/Group 1000002516.svg";
+import StatisticIcon3 from "./../../assets/icons/Group 1000002518.svg";
 const Hero = () => {
 
     const navigate = useNavigate();
@@ -37,7 +38,38 @@ const Hero = () => {
                     </div>
                 </div>
             </div>
-            <Statistic />
+            {/* <Statistic /> */}
+            <div className="statisticContainer">
+            <div className="statisticContainerFluid">
+                <div className="statisticContainerstatistics">
+                    <img src={StatisticIcon1} alt="" />
+                    <div className="statisticContainerstatisticsTexts Texts">
+                        <div>
+                            <h1>100K+</h1>
+                            <p>AI model submissions</p>
+                        </div>
+                    </div>
+                </div>
+                <div className="statisticContainerstatistics">
+                    <img src={StatisticIcon2} alt="" />
+                    <div className="statisticContainerstatisticsTexts Texts">
+                        <div>
+                            <h1>50K+</h1>
+                            <p>Data Scientists</p>
+                        </div>
+                    </div>
+                </div>
+                <div className="statisticContainerstatistics">
+                    <img src={StatisticIcon3} alt="" />
+                    <div className="statisticContainerstatisticsTexts">
+                        <div>
+                            <h1>100+</h1>
+                            <p>AI Challenges hosted</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
         </>
     )
 }
