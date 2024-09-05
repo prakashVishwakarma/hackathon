@@ -7,7 +7,7 @@ import { myLocalData } from "../../constants/constant";
 import StatisticIcon1 from "./../../assets/icons/Group 1000002515.svg";
 import StatisticIcon2 from "./../../assets/icons/Group 1000002516.svg";
 import StatisticIcon3 from "./../../assets/icons/Group 1000002518.svg";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 
 const Hero = () => {
 
