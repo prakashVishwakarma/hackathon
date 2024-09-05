@@ -5,7 +5,7 @@ import './Form.css'
 import { useFormik } from "formik";
 import * as Yup from "yup";
 import { generateRandomMongoDBId, getDataFromLocalStorage, setLocalStorage, } from '../../Utils/Utils';
-import { constant, myLocalData } from '../../constants/constant';
+import { myLocalData } from '../../constants/constant';
 const Form = ({ card }: any) => {
   console.log('challengeName', card)
   const navigate = useNavigate();
@@ -30,12 +30,12 @@ const Form = ({ card }: any) => {
   // Initialize Formik
   const formik = useFormik({
     initialValues: {
-      challengeName: card.challengeName,
-      startDate: card.startDate,
-      endDate: card.endDate,
-      description: card.description,
+      challengeName: '',
+      startDate: '',
+      endDate: '',
+      description: '',
       imageUpload: '',
-      lavelType: card.lavelType,
+      lavelType: '',
     },
     validationSchema,
     onSubmit: (values) => {
