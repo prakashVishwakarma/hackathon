@@ -2,7 +2,7 @@ import { useFormik } from 'formik';
 import { useNavigate } from 'react-router-dom';
 import * as Yup from 'yup';
 import { setLocalStorage, updateConstant } from '../../Utils/Utils';
-import { constant, myLocalData } from '../../constants/constant';
+import { myLocalData } from '../../constants/constant';
 
 const Signup = () => {
 
@@ -28,7 +28,7 @@ const Signup = () => {
             role: Yup.string().required('Please select a role'),
         }),
         onSubmit: (values) => {
-            if( (setLocalStorage(myLocalData, updateConstant(values))) && (updateConstant(values).boolean)) navigate('/login')
+            if ((setLocalStorage(myLocalData, updateConstant(values))) && (updateConstant(values).boolean)) navigate('/login')
         },
     });
 

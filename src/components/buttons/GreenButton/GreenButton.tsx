@@ -1,6 +1,6 @@
 import './GreenButton.css'
 
-const GreenButton = ({ text,onClick }: any) => {
+const GreenButton = ({ text, onClick }: any) => {
 
     return (
         <>

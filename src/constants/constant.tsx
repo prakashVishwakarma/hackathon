@@ -8,17 +8,16 @@ export let constant = {
     },
     card: [
         {
-            image: "",
-            eventType: "", // Upcoming | Active | Past
+            id: "",
+            // imageUpload: FileReader || {} || ""||Blob,
+            challengeName: "",
+            startDate: "",
+            endDate: "",
+            // eventType: "", // Upcoming | Active | Past
             lavelType: "", // Easy | Mediam | Hard
-            heading: "",
-            paragraph: "",
-            overview: "",
+            // paragraph: "",
+            // overview: "",
             description: "",
-            startEnd: "", // Starts in | Ends in
-            days: "",
-            hours: "",
-            mins: "",
         },
     ]
 }

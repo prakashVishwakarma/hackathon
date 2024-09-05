@@ -3,12 +3,12 @@ import GreenButton from '../buttons/GreenButton/GreenButton'
 import RedButton from '../buttons/RedButton/RedButton'
 import './OverviewTab.css'
 
-const OverviewTab = () => {
+const OverviewTab = ({id}:any) => {
 
     const navigate = useNavigate()
 
     const handleClickEdit = ()=>{
-        navigate('/admin-edit-challenge')
+        navigate(`/admin-edit-challenge?id=${id}`)
     }
     
     const handleClickDelete = ()=>{

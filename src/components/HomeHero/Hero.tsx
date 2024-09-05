@@ -3,13 +3,20 @@ import WhiteButton from "../buttons/WhiteButton/WhiteButton"
 import Statistic from "../Statistic/Statistic";
 import MyIcon from "./../../assets/icons/PicsArt_04-14-04.42 1.svg";
 import './hero.css'
+import { getDataFromLocalStorage } from "../../Utils/Utils";
+import { myLocalData } from "../../constants/constant";
 
 const Hero = () => {
 
     const navigate = useNavigate();
 
     const handleCreateChallenge = () => {
-        navigate("/admin-create-challenge");
+        const { data, exists } = getDataFromLocalStorage<any>(myLocalData);
+        if(data.credentials.role === 'Organizers'){
+            navigate("/admin-create-challenge");
+        }else{
+            alert('Signup as a Organizers to create challenge')
+        }
     }
 
     return (
