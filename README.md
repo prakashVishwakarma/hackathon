@@ -1,3 +1,57 @@
+# ####################################################################################
+
+#  TASK UPDATE
+
+#  1 WEBSITE LINK    =  https://prakash-hackathon.netlify.app/
+#  1 GITHUB  LINK    =  https://github.com/prakashVishwakarma/hackathon
+
+#  1  UI IMCOMPLETE WITH RESPONSIVENESS AND ALL
+#  2  ADDED LOGIN SIGNUP UI, FUNCTIONALITY AND VALIDATION
+#  3  ON HOME PAGE "Create Challenge" BUTTON HAS A VALIDATION 
+#  4  ON DETAILS PAGE Edit and Delete BUTTON HAS A VALIDATION 
+#  5  IF YOU ARE ON A HOME PAGE AND DELETE LOCAL STORAGE DATE THEN PAGE REDIRECT TO SIGNUP PAGE
+#  6  I CAN IMPROVE UI AND THE FUNCTIONALITY BUT DUE TO THE DEADLINE I COULD NOT. PLEASE GIVE MORE TIME TO COMPLETE THE TASK
+#  7  IN CARD UI Active, Upcoming AND Past TEXT UPDATE DYNAMICALLY ALSO ADDED easy, mediam and hard TEXT IN THE CARD UI
+  
+#  REQUEST- PLEASE GIVE ME SOME MORE TIME TO COMPLETE THE TASK. I CAN DO IT 
+
+#  HERE ARE SOME MORE PROJECTS TO ASSESS ME WHICH IS SIMILAR TO HACKATHON PROJECT
+
+#  PROJECT 1
+
+#  1 WEBSITE LINK    =  https://my-todos-v2.vercel.app/
+#  1 GITHUB  LINK    =  https://github.com/prakashVishwakarma/my-todo-v2
+#  1 EXPLANATION     =  ( MULTI USER LOGIN TODO ) THIS IS THE TODO APP WHERE USER CAN LOGIN SIGNUP AND USER CAN CRUD ( CREATE READ UPDATE DELETE ) THE TODO
+#                       YOU CAN USE INDIVIDUAL USER AS A INDIVIDUAL BROWSER'S TABS TO CHECK THE MULTI USER LOGIN TODO
+
+#  PROJECT 2
+
+#  2 WEBSITE LINK    =  https://my-todo-kohl.vercel.app/
+#  2 GITHUB  LINK    =  https://github.com/prakashVishwakarma/my-todo
+#  2 EXPLANATION     =  ( SINGLE USER LOGIN TODO ) ONLY ONE USER CAN USE THIS APP, VERY SIMPLE AND BASIC APP
+
+#  ####################################################################################
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
@@ -48,7 +102,3 @@ export default tseslint.config({
   },
 })
 ```
-TASK UPDATE
-UI IMCOMPLETE
-ADDED LOGIN SIGNUP UI FUNCTIONALITY AND VALIDATION
-ON HOME PAGE Create Challenge BUTTON HAS A VALIDATION 
