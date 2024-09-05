@@ -1,6 +1,5 @@
 import ParticipateAIChallengesCard from "./ParticipateAIChallengesCard/ParticipateAIChallengesCard"
 import './ParticipateAIChallenges.css'
-import notebookIcon from './../../assets/icons/carbon_notebook-reference.svg'
 import './ParticipateAIChallengesCard/ParticipateAIChallengesCard.css'
 
 const ParticipateAIChallenges = () => {

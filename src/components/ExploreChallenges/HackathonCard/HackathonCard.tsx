@@ -1,7 +1,7 @@
 import './HackathonCard.css'
 import cardImg1 from './../../../assets/cardimage/Group 1000002771.png'
 import GreenButton from '../../buttons/GreenButton/GreenButton'
-import { Link, useNavigate } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 
 const HackathonCard = ({ value }: any) => {
 console.log('value',value)

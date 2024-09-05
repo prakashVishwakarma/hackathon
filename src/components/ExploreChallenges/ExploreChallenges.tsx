@@ -4,10 +4,23 @@ import { getDataFromLocalStorage } from '../../Utils/Utils'
 import './ExploreChallenges.css'
 import HackathonCard from './HackathonCard/HackathonCard'
 import SearchFilterTags from './SearchFilterTags/SearchFilterTags'
+import { useEffect, useState } from 'react'
 
 const ExploreChallenges = () => {
+  interface Card {
+    id: string;
+    challengeName: string;
+    startDate: string;
+    endDate: string;
+    lavelType: 'Easy' | 'Medium' | 'Hard'; // Enums or Union types to represent specific values
+    description: string;
+  }
+  const [card, setCard] = useState<Card[]>([])
+  const { data }:any = getDataFromLocalStorage(myLocalData)
 
-  const { data, exists } = getDataFromLocalStorage(myLocalData)
+  useEffect(()=>{
+    setCard(data?.card)
+  },[])
 
   return (
     <>
@@ -15,7 +28,7 @@ const ExploreChallenges = () => {
       <div className="ExploreChallengesLayout">
         <div className="ExploreChallengesLayoutfluid">
           {
-            data?.card?.map((value: any, index: any, array: any) => {
+            card?.map((value: any, index: any) => {
               return (
                 <Fragment key={index}>
                   <HackathonCard value={{value, index}} />

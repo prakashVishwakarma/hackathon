@@ -23,7 +23,7 @@ const Form = ({ card }: any) => {
       .max(new Date("2024-12-31"), "End Date cannot be after 2024-12-31")
       .required("End Date is required"),
     description: Yup.string().required("Description is required"),
-    imageUpload: Yup.mixed().required("Image is required"),
+    // imageUpload: Yup.mixed().required("Image is required"),
     lavelType: Yup.string().required("LavelType is required"),
   });
 
@@ -34,7 +34,7 @@ const Form = ({ card }: any) => {
       startDate: '',
       endDate: '',
       description: '',
-      imageUpload: '',
+      // imageUpload: '',
       lavelType: '',
     },
     validationSchema,
@@ -124,7 +124,7 @@ const Form = ({ card }: any) => {
           ) : null}
         </div>
 
-        <div>
+        {/* <div>
           <label htmlFor="imageUpload">Image</label>
           <input
             type="file"
@@ -140,7 +140,7 @@ const Form = ({ card }: any) => {
           {formik.touched.imageUpload && formik.errors.imageUpload ? (
             <div className="error">{formik.errors.imageUpload}</div>
           ) : null}
-        </div>
+        </div> */}
 
         <div style={{ display: "flex", flexDirection: "column" }}>
           <label htmlFor="lavelType">LavelType</label>

@@ -11,7 +11,7 @@ const Hero = () => {
     const navigate = useNavigate();
 
     const handleCreateChallenge = () => {
-        const { data, exists } = getDataFromLocalStorage<any>(myLocalData);
+        const { data } = getDataFromLocalStorage<any>(myLocalData);
         if(data.credentials.role === 'Organizers'){
             navigate("/admin-create-challenge");
         }else{
